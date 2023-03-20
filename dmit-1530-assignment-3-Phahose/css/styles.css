@@ -1,0 +1,936 @@
+:root {
+    /** colours **/
+    --yellow:           #FED766; 
+    --lt-seafoam-green: #ecf9f6;
+    --seafoam-green:    #43C6AC;
+    --md-blue:          #191654;
+    --dk-blue:          #0C0B2A;
+    --blue-grey:        #6B717E;
+
+    /** typography **/
+    --headings:'Monoton', cursive;
+    --body: 'Rubik', sans-serif;
+}
+
+.sr-only {
+    position: absolute;
+    top: 0;
+    left: -9999999px;
+    width: 0.1rem;
+    height: 0.1rem;
+    visibility: hidden;
+}
+
+@font-face {
+    font-family:'Nick';
+    src: url('fonts/monoton-regular-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'text';
+    src: url('fonts/rubik-variablefont_wght-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'text',cursive;
+}
+
+h2{
+    font-family: 'Nick',cursive;
+}
+svg{
+    width: 2rem;
+    height: 2rem;
+}
+
+button{
+    height: 2.5rem;
+}
+
+.btn svg rect{
+    fill: var(--md-blue);
+}
+
+
+header>div>div>a>svg{
+    width: 7rem;
+}
+
+header>div{
+    display: flex;
+    margin-top: 2rem;
+}
+
+header{
+    border-bottom: 2px solid #d3e0dd ;
+    height: 4rem;
+    position: sticky;
+    align-items: center;
+    top: 0rem;
+    z-index: 1;
+    background-color: #fff;
+}
+
+nav{
+    position: relative;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    margin-top: 0;
+    z-index: 1;
+    max-height: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+/* V: You want to grab everything here EXCEPT your checkboxes. */
+input:not(.check input){
+    margin: auto;
+    width: 80vw;
+    margin-bottom: 2rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--md-blue);
+    margin-left: 1rem;
+    padding-left: 3rem;
+}
+
+.magnify{
+    position: relative;
+}
+
+nav svg{
+    width: 1rem;
+    position: absolute;
+    left: 2rem;
+    bottom: -2.3rem;
+}
+
+.show-list{
+ max-height: 100vh;
+}
+
+.btn{
+    display: flex;
+   justify-content: right;
+   width: calc(100vw - 7rem);
+}
+
+button{
+    background-color:#ecf9f6 ;
+    border: none;
+}
+
+button>svg>path{
+   fill:#191654;
+}
+
+nav ul>li{
+    list-style: none;
+   
+    padding-top: 1rem;
+    font-size: 200%;
+    border-bottom: 2px solid #d3e0dd ;
+    padding-left: 1rem;
+
+}
+
+nav ul>li a{
+    color: var(--md-blue);
+}
+
+.inspired>div{
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    justify-content: left;
+    padding-left: 0rem;
+}
+
+.bluepic{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background: url(../img/hero-banner.webp) center/cover;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.purple{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    background: unset;
+    background: url(../img/parallax-banner.webp) center/cover;
+    background-attachment: fixed;
+}
+
+.bluepic>div{
+    max-width: 55rem;
+    margin: auto;
+}
+
+.bluepic h2{
+    font-size: 300%;
+    max-width: 10rem;
+    line-height: 3rem;
+    color: #fff;
+}
+
+.purple h2{
+    font-size: 250%;
+    max-width: 22rem;
+    line-height: 3.5rem;
+    color: #fff;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--seafoam-green);
+}
+
+.bluepic p{
+    color: #fff;
+}
+
+.work{
+    margin: auto;
+    border: 2px solid var(--seafoam-green);
+    border-radius: 0.2rem;
+    width: 23rem;
+    margin-top: 1rem;
+    text-align: center;
+    padding: 1rem 0; 
+}
+
+.work:first-of-type{
+    background-color: var(--seafoam-green);
+}
+
+.work:first-of-type a{
+    color: var(--md-blue);
+}
+
+.work:last-of-type a{
+    color: var(--seafoam-green);
+}
+
+.our-work div:first-child{
+    margin-top: 4rem;
+}
+
+.our-work div:first-child h2{
+    font-size: 2.5rem;
+    color:var(--md-blue);
+    border-bottom: 2px solid var(--seafoam-green);
+    width: 17rem;
+    margin-bottom: 1rem;
+}
+
+.contact div:first-child h2{
+    font-size: 2.5rem;
+    color:var(--md-blue);
+    border-bottom: 2px solid var(--seafoam-green);
+    width: 19rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.our-work{
+    padding: 0 1rem;
+}
+
+.our-work div:last-child{
+    margin-bottom: 3rem;
+}
+
+.contact div:last-child{
+    margin-bottom: 3rem;
+    width: 20rem;
+}
+
+label{
+    padding-left: 1rem;
+}
+
+.parallax{
+    display: flex;
+    max-width: 100rem;
+}
+
+.scroll{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    white-space: nowrap;
+    scrollbar-color: var(--accent) #e2e2e2;
+    scrollbar-width: thin;
+}
+
+.parallax div:nth-child(3){
+    width: 20rem;
+}
+
+.holder div:first-child>img{
+    height:11rem;
+    width: calc(100rem / 4);
+    min-width: 15rem;
+}
+
+.holder{
+    width: calc(100rem / 4);
+}
+
+.secondrow{
+    display: flex;
+    max-width: 100rem;
+}
+
+.holder:nth-child(odd) div:last-child{
+    background-color: var(--md-blue);
+    padding-left: 0.5rem;
+}
+
+.holder:nth-child(even) div:last-child{
+    background-color: var(--seafoam-green);
+    padding-left: 0.5rem;
+}
+
+.holder div{
+    color: #fff;
+}
+
+.holder:nth-child(even) div:last-child a{
+    color: #000;
+}
+
+.holder:nth-child(even) div:last-child p{
+    color: #000;
+}
+
+.holder:nth-child(odd) div:last-child a{
+    color: #fff;
+}
+
+.secondrow div:nth-child(2) img{
+    min-width: 17rem;
+}
+
+.view{
+    border: 3px solid var(--dk-blue);
+    text-align: center;
+    width: 23rem;
+    align-items: center;
+    padding-bottom: 1rem;
+    margin: auto;
+    margin-top: 2rem;
+    border-radius: 3px;
+}
+
+.view a{
+font-size: 130%;
+color: var(--dk-blue);
+}
+
+.view svg{
+    padding-top: 1rem;
+}
+
+.we-do{
+    padding: 1rem;
+}
+
+.we-do h2{
+    color: var(--md-blue);
+    width: fit-content;
+    border-bottom: 2px solid var(--seafoam-green);
+    font-size: 230%;
+    margin: auto;
+    margin-top: 4rem;
+}
+
+.we-do div{
+    width: 35ch;
+    margin: auto;
+}
+
+.we-do div:first-child{
+    margin-bottom: 2rem;
+}
+
+.view:nth-of-type(2){
+    margin-top: 3rem;
+    width: 34ch;
+   margin-bottom: 3rem;
+}
+
+h3{
+    padding: 1rem 0;
+    color: var(--seafoam-green);
+    font-size: 150%;
+    width: 12rem;
+}
+
+.branding p{
+    margin-bottom: 3rem;
+}
+
+.branding img{
+    height: 14rem;
+    min-width: 22rem;
+}
+
+.inspired{
+    background: url(../img/call-to-action-banner.webp);
+    padding: 1rem;
+    height: 40rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.inspired h2{
+    color: #fff;
+    text-align: center;
+    width: 15rem;
+    font-size: 200%;
+    margin: auto;
+    align-items: center;
+    margin-top: 12rem;
+}
+
+.inspired div{
+    background-color: var(--md-blue);
+    height: 3.5rem;
+   
+    width: 23rem;
+    border-radius: 3px;
+    margin-top: 2rem;
+    padding-top: 0.5rem;
+}
+
+.inspired a{
+    font-size: 150%;
+    color: #fff;
+    padding-top: 1rem;
+}
+
+footer>div:first-child{
+    padding: 1rem;
+    padding-bottom: 5rem;
+}
+
+
+footer{
+    background-color: var(--md-blue);
+}
+
+footer svg path{
+    fill: #fff;
+}
+
+footer h2{
+    color: #fff;
+    margin-top: 3rem;
+}
+
+address{
+    margin-bottom: 2rem;
+}
+
+address a{
+    color: #fff;
+    font-style: normal;
+}
+
+address:first-of-type{
+    margin-top: 1rem;
+}
+
+.secondfooter ul{
+    display: flex;
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.secondfooter ul li{
+    list-style: none;
+    text-decoration: none;
+}
+
+.secondfooter{
+    background-color: var(--dk-blue);
+    margin-bottom: 0;
+    width: inherit;
+    padding: 0.5rem;
+}
+
+.secondfooter p{
+    color: #fff;
+    width: 16rem;
+    font-size: 80%;
+}
+
+footer a{
+    color: #fff;
+}
+
+footer p{
+    color: #fff;
+    font-style: normal;
+}
+
+/* About */
+
+/* V: To make most of your labels behave, you need to make them block-level elements. This makes sure they stay on only one line. */
+
+label:not(.check label) {
+    display: block;
+}
+
+.check label{
+    margin-left: 0;
+    padding-left: 0;
+    
+}
+
+.check input{
+    border: 2px solid var(--seafoam-green);
+}
+
+select{
+    margin-left: 1rem;
+    min-width: 21rem;
+    height: 4rem;
+    border: 2px solid var(--seafoam-green);
+    border-radius: 4px;
+    margin-bottom: 2rem;
+}
+
+
+form h3{
+    width: 25rem;
+    font-size: 200%;
+    padding: 0 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color:var(--blue-grey) ;
+}
+
+form input[type="text"],form input[type="email"],form input[type="tel"]{
+    border: 2px solid var(--seafoam-green);
+    border-radius: 4px;
+    height: 3rem;
+}
+
+input[type="checkbox"],form input[type="email"],form input[type="tel"]{
+    margin-left: 1rem;
+    border: 2px solid var(--seafoam-green);
+    border-radius: 4px;
+}
+
+form .view{
+    margin-left: 1rem;
+    padding-top: 1rem;
+    background-color: #fff;
+    width: 20rem;
+    height: 5rem;
+    margin-bottom: 5rem;
+    
+}
+ 
+input[type="checkbox"]{
+   outline: 2px solid var(--seafoam-green);
+}
+
+
+form input[type="text"]:invalid,
+form input[type="email"]:invalid,
+form input[type="tel"],
+select:invalid,
+textarea:invalid{
+    border: 2px solid red   
+}
+
+textarea{
+    margin: 0 1rem 1rem 1rem;
+    max-height: 15rem;
+    max-width: 20rem;
+    border: 2px solid var(--seafoam-green);
+    border-radius: 4px;
+    min-width: 10rem;
+}
+@media screen and (min-width: 55rem){
+
+    .bluepic{
+        height: 36rem;
+        padding-top: 10rem;
+        
+    }
+
+    .bluepic h2{
+        max-width: 31rem;
+    }
+
+    .bluepic div:nth-child(2){ 
+        display: flex;
+    }
+
+    .work{
+        justify-content: center;
+    }
+
+    .our-work{
+        max-width: 35rem;
+    }
+
+    .view{
+        margin-left: 22rem;
+    }
+
+    .we-do{
+        max-width: 100vw;
+    }
+
+    .we-do h2{
+        margin-left: 3rem;
+    }
+
+    .we-do>div:nth-child(1){
+        width: 75ch;
+       margin-left: 1rem;
+        margin-bottom: 2rem;
+    }
+
+
+    .branding{
+        max-width: 50rem;
+        min-width: 50rem;
+        display: flex;
+        flex-flow: row wrap;
+        padding: unset;
+        align-items: center;
+        margin: auto;
+    }
+
+    .branding p{
+        margin-bottom: 3rem;
+    }
+    
+    .branding img{
+        height: 14rem;
+        min-width: 1rem;
+        width: 100%
+    }
+
+    .branding div{
+        width: 20rem;
+        justify-self: start;
+    }
+
+    .first{
+        max-width: 20rem;
+    }
+
+    .branding >div:nth-child(even){
+        margin-bottom: 4rem;
+        width: 27rem;
+    }
+
+    .inspired>div{
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+    .inspired h2{
+        width: 30rem;
+        font-size: 250%;
+    }
+    
+
+    footer>div>div{
+        display: flex;
+        justify-content: space-between;
+        width: 40rem;
+        
+    }
+
+    footer>div:first-child{
+        padding-left: 2rem;
+        padding-bottom: 5rem;
+    }
+
+    .secondfooter{
+        padding-left: 2rem;
+        background-color: var(--dk-blue);
+    }
+
+    footer>div:first-child div>p{
+        margin: 1rem 0;
+    }
+
+    .secondfooter p{
+        color: #fff;
+        width: 30rem;
+        font-size: 100%;
+        padding-top: 1.5rem;
+    }
+
+    .secondfooter>div{
+        display: flex;
+        flex-flow: row-reverse;
+        justify-content: space-between;
+    }
+
+    .flex-form{
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .check{
+        display: flex;
+        flex-flow: row wrap;
+        width: 37rem;
+        justify-content: space-between;
+    }
+
+    .check>div:last-child{
+        margin-right: 9.6rem;
+    }
+
+    form input[type="text"],form input[type="email"],form input[type="tel"]{
+        border: 2px solid var(--seafoam-green);
+        border-radius: 4px;
+        height: 3rem;
+        max-width: 25rem;
+    }
+
+    form input[type="text"]:invalid,form input[type="email"]:invalid,form input[type="tel"]{
+        border: 2px solid red   
+    }
+
+    .frm{
+        padding-left: 4rem;
+    }
+
+    footer>div:first-child{
+        padding-left: 4rem;
+    }
+
+        
+    textarea{
+        max-height: 15rem;
+        width: 40rem;
+        max-width: 50rem;
+        min-width: 30rem;
+    }
+
+    form h3{
+        width: 30rem;
+        font-size: 200%;
+    }
+
+    
+    .n1{
+        margin-left: 30rem;
+     }
+
+}
+
+@media screen and (min-width: 90rem) {
+     .toggle{
+        display: none;
+    }
+
+    header nav {
+        position: static;
+        max-height: unset;
+        width: auto;
+        /* position: relative; */
+    }
+
+    .nav>svg{
+        display: unset;
+    }
+
+    .dropdown-menu{
+        position: absolute;
+        top: 2rem;
+        right: 1rem;
+        overflow:hidden;
+        justify-content: center;
+        transition: all 0.5s ease-in-out;
+        border-radius: 0 0 5px 5px;
+    }
+
+    nav {
+        max-height: unset;
+        display: flex;
+        max-width: 50rem;
+    }
+
+    nav ul>li{
+       
+        font-size: 100%;
+        border-bottom: unset;
+        padding-left: 1rem;
+    }
+
+    nav>ul{
+        display: flex;
+       min-width: fit-content;
+    }
+
+    header{
+        display: flex;
+        flex-flow: row wrap;
+        height: fit-content;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    /* V: This grabs ANY input. You need to be more specific! */
+    nav input:first-of-type {
+        margin: auto;
+        margin-top: 1.5rem;
+        width: 20vw;
+        margin-bottom: 1rem;
+        height: 2.0rem;
+        border-radius: 5px;
+        border: 1px solid var(--md-blue);
+        margin-left: 1rem;
+        position: relative;
+    }
+
+    .magnify{
+        position: relative;
+    }
+
+    nav svg{
+        width: 1rem;
+        position:absolute;
+        left: 2rem;
+       top: 1.5rem;
+        z-index: 1;
+    }
+
+    /* nav{
+        position: unset;
+    } */
+
+    header>div{
+        width: 40vw;
+    }
+
+    .we-do{
+        display: flex;
+    }
+
+    .check{
+        display: flex;
+        flex-flow: row wrap;
+        width: 70rem;
+        justify-content: space-between;
+    }
+
+    /* .check>div:last-child{
+        margin-right: 9.6rem;
+    } */
+
+
+    .we-do>div:first-child{
+        margin: auto;
+        margin-right: 5rem;
+        margin-left: 5rem;
+    }
+
+    .branding{
+        max-width: 40rem;
+        min-width: 40rem;
+        display: flex;
+        flex-flow: row wrap;
+        padding: unset;
+        align-items: center;
+        margin: auto;
+    }
+
+    .branding p{
+        margin-bottom: 3rem;
+    }
+    
+    .branding img{
+        height: 14rem;
+        min-width: 1rem;
+        width: 100%
+    }
+
+    .branding div{
+        width: 15rem;
+        justify-self: start;
+    }
+
+    .branding >div:nth-child(even){
+        margin-bottom: 3rem;
+        width: 20rem;
+    }
+
+    .we-do .view{
+        margin-top: 3rem;
+    }
+
+    .container{
+        max-width: 70rem;
+        margin: auto;
+        justify-content: center;
+    }
+
+    footer>div:first-child{
+        max-width: 70rem;
+        margin: auto;
+        padding-left: 6rem;
+    }
+
+    .secondfooter>div{
+        margin:  auto;
+        width: 70rem;
+        padding-left: 6rem;
+    }
+
+    .frm{
+        padding-left: 6rem;
+    }
+
+    /* forms */
+    form input[type="text"]{
+        border: 2px solid var(--seafoam-green);
+        border-radius: 4px;
+        height: 3rem;
+        max-width: 30rem;
+    }
+
+    form .view{
+        background-color:var(--md-blue);
+    }
+
+    form .view>a{
+        color: #fff;
+    }
+
+    form .view>svg path{
+        fill: #fff;
+    }
+
+    .n1{
+        margin-left: 45rem;
+     }
+    
+     .we-do h2{
+         width: 20rem;
+         margin-left: 0;
+     }
+}
